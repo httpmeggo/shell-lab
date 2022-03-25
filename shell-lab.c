@@ -3,16 +3,16 @@
 
 #define MAX 50
 
-char *nullReplace(char *str, char locate)
-{
-    char *current = strchr(str, locate);
-    while (current)
-    {
-        *current = '\0';
-        current = strchr(current, locate);
-    }
-    return str;
-}
+// char *nullReplace(char *str, char locate)
+// {
+//     char *current = strchr(str, locate);
+//     while (current)
+//     {
+//         *current = '\0';
+//         current = strchr(current, locate);
+//     }
+//     return str;
+// }
 
 int main()
 {
@@ -61,7 +61,7 @@ int main()
                 char *env[] = {forkStr, NULL};
                 char bin[MAX] = "/bin/";
                 strcat(bin, forkStr);
-                printf("%s", forkStr);
+//                 printf("%s", forkStr);
                 if (execve(bin, env, NULL) == -1)
                 {
                     printf("Your input is invalid. Cannot fork.\n");
